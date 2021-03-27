@@ -1,0 +1,15 @@
+{{#if auth.loggedIn}}
+<a href="/blog/add">Add Entry</a>
+{{/if}}
+<div class="blog">
+    {{#each blogEntries.rows}}
+    <div class="entry">
+        <p>{{title}}</p>
+        <div id="blogUser" class="user">user: {{username}}</div>
+        <div class="content">{{{content}}}</div><hr>
+    </div>
+    {{/each}}
+    {{#each blogEntries.entries}}
+    <a id = "pagetotal" href="/blog/{{start}}">page {{page}}</a>
+    {{/each}}
+</div>
